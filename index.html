@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>旅行计事本</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <section id="cover" class="cover">
+    <img id="cover-image" class="cover-image" src="" alt="" />
+    <div class="cover-overlay">
+      <h1 id="cover-title" class="cover-title"></h1>
+      <p id="cover-tagline" class="cover-tagline"></p>
+      <button id="enter-btn" class="enter-btn" type="button">点击进入旅行 →</button>
+    </div>
+  </section>
+
+  <main id="main-content" class="main-content hidden">
+    <section id="timeline" class="section">
+      <h2>行程时间线</h2>
+      <div id="timeline-list" class="timeline-list"></div>
+    </section>
+
+    <section id="route" class="section">
+      <h2>旅行路线</h2>
+      <div id="route-svg-container" class="route-svg-container"></div>
+    </section>
+
+    <section id="budget" class="section">
+      <h2>预算明细</h2>
+      <div id="budget-list" class="budget-list"></div>
+      <p id="budget-total" class="budget-total"></p>
+      <button id="approve-budget-btn" class="approve-btn" type="button">批准预算 ✓</button>
+      <p id="approve-status" class="form-status" hidden></p>
+    </section>
+
+    <section id="destinations" class="section">
+      <h2>目的地</h2>
+      <div id="destinations-list" class="destinations-list"></div>
+    </section>
+
+    <section id="mood-message" class="section">
+      <h2>今天的心情</h2>
+      <div id="mood-buttons" class="mood-buttons"></div>
+      <textarea id="message-input" class="message-input" placeholder="想说点什么..."></textarea>
+      <button id="send-message-btn" class="send-btn" type="button">发送留言</button>
+      <p id="message-status" class="form-status" hidden></p>
+    </section>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
