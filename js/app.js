@@ -2,7 +2,7 @@ import { tripData } from './data.js';
 import { renderTimeline, renderRoute, renderBudget, renderDestinations } from './render.js';
 
 // 见 README.md：注册 Formspree 后把下面这行换成你自己的表单地址
-const FORM_ENDPOINT = 'https://formspree.io/f/REPLACE_ME';
+const FORM_ENDPOINT = 'https://formspree.io/f/mykrywqp';
 
 function initCover() {
   const coverImage = document.getElementById('cover-image');
