@@ -1,4 +1,5 @@
 import { tripData } from './data.js';
+import { renderTimeline } from './render.js';
 
 function initCover() {
   const coverImage = document.getElementById('cover-image');
@@ -20,4 +21,10 @@ function initCover() {
   });
 }
 
+function initTimeline() {
+  const container = document.getElementById('timeline-list');
+  renderTimeline(tripData.days, container);
+}
+
 initCover();
+initTimeline();
