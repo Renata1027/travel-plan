@@ -1,5 +1,5 @@
 import { tripData } from './data.js';
-import { renderTimeline } from './render.js';
+import { renderTimeline, renderRoute } from './render.js';
 
 function initCover() {
   const coverImage = document.getElementById('cover-image');
@@ -26,5 +26,11 @@ function initTimeline() {
   renderTimeline(tripData.days, container);
 }
 
+function initRoute() {
+  const container = document.getElementById('route-svg-container');
+  renderRoute(tripData.route, container);
+}
+
 initCover();
 initTimeline();
+initRoute();
