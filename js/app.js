@@ -72,8 +72,47 @@ function initDestinations() {
   renderDestinations(tripData.destinations, container);
 }
 
+const MOODS = ['😍', '😌', '🥹', '😴', '🤩'];
+
+function initMood() {
+  const wrap = document.getElementById('mood-buttons');
+  let selectedMood = null;
+
+  MOODS.forEach((emoji) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = emoji;
+    btn.addEventListener('click', () => {
+      wrap.querySelectorAll('button').forEach((b) => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedMood = emoji;
+    });
+    wrap.appendChild(btn);
+  });
+
+  const messageInput = document.getElementById('message-input');
+  const sendBtn = document.getElementById('send-message-btn');
+  const statusEl = document.getElementById('message-status');
+
+  sendBtn.addEventListener('click', async () => {
+    const message = messageInput.value.trim();
+    if (!selectedMood && !message) {
+      showStatus(statusEl, '选个心情或者写点什么吧～');
+      return;
+    }
+    sendBtn.disabled = true;
+    const ok = await submitToFormspree({ type: '心情留言', mood: selectedMood, message });
+    showStatus(statusEl, ok ? '已发送！' : '发送失败，请稍后重试');
+    if (ok) {
+      messageInput.value = '';
+    }
+    sendBtn.disabled = false;
+  });
+}
+
 initCover();
 initTimeline();
 initRoute();
 initBudget();
 initDestinations();
+initMood();
