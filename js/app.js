@@ -1,5 +1,5 @@
 import { tripData } from './data.js';
-import { renderTimeline, renderRoute, renderBudget } from './render.js';
+import { renderTimeline, renderRoute, renderBudget, renderDestinations } from './render.js';
 
 // 见 README.md：注册 Formspree 后把下面这行换成你自己的表单地址
 const FORM_ENDPOINT = 'https://formspree.io/f/REPLACE_ME';
@@ -67,7 +67,13 @@ function initBudget() {
   });
 }
 
+function initDestinations() {
+  const container = document.getElementById('destinations-list');
+  renderDestinations(tripData.destinations, container);
+}
+
 initCover();
 initTimeline();
 initRoute();
 initBudget();
+initDestinations();

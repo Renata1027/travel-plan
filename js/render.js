@@ -77,3 +77,40 @@ export function renderBudget(budget, containerEl, totalEl) {
   }
   totalEl.textContent = `总计：${formatCurrency(computeGrandTotal(budget.categories), budget.currency)}`;
 }
+
+export function renderDestinations(destinations, containerEl) {
+  containerEl.innerHTML = '';
+  for (const dest of destinations) {
+    const card = document.createElement('div');
+    card.className = 'destination-card';
+
+    const img = document.createElement('img');
+    img.src = dest.image;
+    img.alt = dest.name;
+    card.appendChild(img);
+
+    const detail = document.createElement('div');
+    detail.className = 'destination-detail';
+
+    const name = document.createElement('h3');
+    name.textContent = dest.name;
+    detail.appendChild(name);
+
+    const summary = document.createElement('p');
+    summary.className = 'summary';
+    summary.textContent = dest.summary;
+    detail.appendChild(summary);
+
+    const full = document.createElement('p');
+    full.className = 'full-detail hidden';
+    full.textContent = dest.detail;
+    detail.appendChild(full);
+
+    card.appendChild(detail);
+    card.addEventListener('click', () => {
+      full.classList.toggle('hidden');
+    });
+
+    containerEl.appendChild(card);
+  }
+}
