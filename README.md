@@ -32,7 +32,7 @@
 ## 🚀 访问方式
 
 直接打开部署链接即可浏览：
-> `[点击链接](https://travel-plan-8hxznay7b-renata1027s-projects.vercel.app/)`
+> [点击链接](https://travel-plan-8hxznay7b-renata1027s-projects.vercel.app/)
 
 手机、电脑浏览器均可正常打开，建议使用系统自带浏览器访问，交互体验更顺畅。
 
