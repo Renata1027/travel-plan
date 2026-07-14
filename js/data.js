@@ -136,24 +136,37 @@ export const tripData = {
     categories: [
       {
         name: '交通',
-        items: [{ label: '汽油 + 过路费（往返约 1000 公里）', amount: 0 }],
+        items: [
+          { label: '小米 YU7 用车费', amount: 1056 },
+          { label: '高速过路费（北京→乌丹镇）', amount: 222 },
+          { label: '车辆充电（乌丹镇）', amount: 200 },
+          { label: '高速过路费（乌丹镇→乌兰布统）', amount: 30 },
+          { label: '车辆充电（军马场镇）', amount: 100 },
+          { label: '国家一号风景大道通行 / 停车费', amount: 16 },
+        ],
       },
       {
         name: '住宿',
-        items: [{ label: '乌丹镇酒店（1 晚）', amount: 0 }],
+        items: [
+          { label: '乌丹镇酒店（第一晚）', amount: 150 },
+          { label: '乌兰布统草原酒店（第二晚）', amount: 150 },
+        ],
       },
       {
         name: '餐饮',
         items: [
-          { label: '手把肉午餐', amount: 0 },
-          { label: '牧民家晚餐', amount: 0 },
-          { label: '草原早餐', amount: 0 },
-          { label: '冰煮羊午餐', amount: 0 },
+          { label: '手把肉午餐（乌丹镇）', amount: 150 },
+          { label: '牧民家晚餐（乌兰布统）', amount: 200 },
+          { label: '草原早餐（乌兰布统营地）', amount: 30 },
+          { label: '冰煮羊午餐（军马场镇）', amount: 200 },
         ],
       },
       {
         name: '门票及其他',
-        items: [{ label: '景区门票 / 篝火等杂项', amount: 0 }],
+        items: [
+          { label: '草原篝火体验', amount: 50 },
+          { label: '乌兰布统景区门票', amount: 260 },
+        ],
       },
     ],
   },
